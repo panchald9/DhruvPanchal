@@ -44,14 +44,33 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
+                <!-- Terminal window -->
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">dhruv@portfolio:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div><span class="t-comment">// Hello, World! Welcome to my portfolio</span></div>
+                        <div><span class="t-keyword">const</span> <span class="t-var">developer</span> <span class="t-op">=</span> <span class="t-op">{</span></div>
+                        <div>&nbsp;&nbsp;<span class="t-string">"name"</span><span class="t-op">:</span> <span class="t-string">"Dhruv Panchal"</span><span class="t-op">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="t-string">"role"</span><span class="t-op">:</span> <span class="t-string">"<span id="typing-role"></span>"</span><span class="cursor-blink"></span><span class="t-op">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="t-string">"location"</span><span class="t-op">:</span> <span class="t-string">"Ahmedabad, India"</span><span class="t-op">,</span></div>
+                        <div>&nbsp;&nbsp;<span class="t-string">"available"</span><span class="t-op">:</span> <span class="t-keyword">true</span></div>
+                        <div><span class="t-op">};</span></div>
+                    </div>
+                </div>
+
                 <div class="location">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                     <span>Ahmedabad, India</span>
                 </div>
-                <h1>Hi, I'm Dhruv Panchal</h1>
+                <h1>Hi, I'm <span class="name-highlight">Dhruv Panchal</span></h1>
                 <p class="roles">Full-Stack Developer | Android Developer | AI Integration Specialist</p>
                 <p class="description">
                     I build modern web apps, mobile apps, and intelligent systems with clean UI, fast performance, 
@@ -75,8 +94,11 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-grid">
+            <div class="section-heading reveal" data-index="01">
+                <h2>About Me</h2>
+            </div>
+            <div class="glow-line reveal"></div>
+            <div class="about-grid reveal">
                 <div class="about-text">
                     <p>
                         I am a versatile Full-Stack and Mobile App Developer with expertise in React, Node.js, Flask, 
@@ -131,10 +153,13 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills</h2>
-            <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
+            <div class="section-heading reveal" data-index="02">
+                <h2>Skills</h2>
+            </div>
+            <div class="glow-line reveal"></div>
+            <p class="section-subtitle reveal">Technologies and tools I use to bring ideas to life</p>
             
-            <div class="skills-section">
+            <div class="skills-section reveal">
                 <h3>Major Skills</h3>
                 <div class="skill-cards">
                     <div class="skill-card">
@@ -189,7 +214,7 @@
                 </div>
             </div>
 
-            <div class="skills-section">
+            <div class="skills-section reveal">
                 <h3>Other Skills</h3>
                 <div class="skill-badges">
                     <span class="badge">HTML</span>
@@ -212,11 +237,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
-            <p class="section-subtitle">A selection of my recent work</p>
+            <div class="section-heading reveal" data-index="03">
+                <h2>Projects</h2>
+            </div>
+            <div class="glow-line reveal"></div>
+            <p class="section-subtitle reveal">A selection of my recent work</p>
 
             <!-- Featured Project -->
-            <div class="project-card featured">
+            <div class="project-card featured reveal">
                 <div class="project-header">
                     <h3>Roos Park Restaurant Website</h3>
                     <span class="badge-featured">Featured</span>
@@ -234,7 +262,7 @@
             </div>
 
             <!-- Regular Projects -->
-            <div class="project-grid">
+            <div class="project-grid reveal">
                 <div class="project-card">
                     <h3>Employee Management System</h3>
                     <div class="project-tags">
@@ -304,10 +332,13 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Get In Touch</h2>
-                <p class="section-subtitle">Let's collaborate on your next project</p>
+                <div class="section-heading reveal" data-index="04" style="justify-content:center;">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="glow-line reveal" style="margin:1rem auto 2.5rem;"></div>
+                <p class="section-subtitle reveal">Let's collaborate on your next project</p>
 
-                <div class="contact-grid">
+                <div class="contact-grid reveal">
                     <div class="contact-card">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>

@@ -47,3 +47,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ── Typewriter effect ──────────────────────────────────────────────────────
+const roles = [
+    'Full-Stack Developer',
+    'Android Developer',
+    'AI Integration Specialist',
+    'UI/UX Designer',
+];
+
+const typingEl = document.getElementById('typing-role');
+if (typingEl) {
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+        const current = roles[roleIndex];
+
+        if (isDeleting) {
+            typingEl.textContent = current.slice(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingEl.textContent = current.slice(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let delay = isDeleting ? 50 : 90;
+
+        if (!isDeleting && charIndex === current.length) {
+            delay = 1800; // pause at end
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            delay = 400;
+        }
+
+        setTimeout(typeWriter, delay);
+    }
+
+    typeWriter();
+}
+
+// ── Scroll reveal ──────────────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
