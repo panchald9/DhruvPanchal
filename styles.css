@@ -261,9 +261,9 @@ header .container {
     border-radius: 50%;
 }
 
-.terminal-dot.red   { background-color: hsl(0, 75%, 60%); }
-.terminal-dot.yellow{ background-color: hsl(45, 90%, 60%); }
-.terminal-dot.green { background-color: hsl(130, 60%, 50%); }
+.terminal-dot.red    { background-color: hsl(0, 75%, 60%); }
+.terminal-dot.yellow { background-color: hsl(45, 90%, 60%); }
+.terminal-dot.green  { background-color: hsl(130, 60%, 50%); }
 
 .terminal-title {
     margin-left: 0.5rem;
